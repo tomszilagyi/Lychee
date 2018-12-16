@@ -3770,18 +3770,6 @@ photo.previous = function (animate) {
 
 		var delay = 0;
 
-		if (animate === true) {
-
-			delay = 200;
-
-			$('#imageview #image').css({
-				WebkitTransform: 'translateX(100%)',
-				MozTransform: 'translateX(100%)',
-				transform: 'translateX(100%)',
-				opacity: 0
-			});
-		}
-
 		setTimeout(function () {
 			if (photo.getID() === false) return false;
 			lychee.goto(album.getID() + '/' + album.getByID(photo.getID()).previousPhoto);
@@ -3794,18 +3782,6 @@ photo.next = function (animate) {
 	if (photo.getID() !== false && album.json && album.getByID(photo.getID()) && album.getByID(photo.getID()).nextPhoto !== '') {
 
 		var delay = 0;
-
-		if (animate === true) {
-
-			delay = 200;
-
-			$('#imageview #image').css({
-				WebkitTransform: 'translateX(-100%)',
-				MozTransform: 'translateX(-100%)',
-				transform: 'translateX(-100%)',
-				opacity: 0
-			});
-		}
 
 		setTimeout(function () {
 			if (photo.getID() === false) return false;
